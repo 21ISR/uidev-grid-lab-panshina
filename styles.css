@@ -47,29 +47,30 @@ main {
 .masonry {
     gap: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
-    grid-auto-flow: dense;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(80px, auto);
 }
 .masonry .grid-item {
     background: white;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: span 1;
+    grid-row: span 1;
 }
 .masonry .wide {
-    grit-column: span 2;
+    grid-column: span 2;
 }
 .masonry .tall {
-    grit-row: span 2;
+    grid-row: span 2;
 }
 .masonry .large {
-    grit-column: span 2
-    grit-row: span 2;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 .masonry .small {
-    grit-column: 1/2
-    grit-row: 1/2;
+    grid-column: span 1;
+    grid-row: span 1;
 }
 aside {
     background: #f39c12;
